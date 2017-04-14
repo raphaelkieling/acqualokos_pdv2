@@ -1,0 +1,64 @@
+h2{
+    font-size:32px;
+}
+.header_container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/parque_bg.jpg);
+    background-size: cover;
+}
+.header_logo{
+    margin:10px;
+    width: 200px;
+}
+.header_info{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    margin-bottom: 40px;
+    color:white;
+    bottom:0;
+}
+.header_info button{
+    color:white;
+}
+
+/*Botoes*/
+.box-button{
+    background-color: #83D6DE;
+    border-radius: 10px;
+    height:125px;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+}
+.box-button img{
+    height: 100%;
+    transition: 0.4s;
+}
+.box-button:hover img{
+    transform: scale(1.1);
+}
+
+
+/*Tabela*/
+.table-search{
+    border:1px solid #c0c0c0;
+    border-radius: 10px;
+    height:400px;
+    overflow: hidden;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+}
+
+.table-search table{
+    margin-left: 10px;
+}
+
+.table-search table th,.table-search table td{
+    text-align: center;
+}
+
+.table-search table td{
+    font-size: 18px;
+}

@@ -1,0 +1,16 @@
+.container img{
+    margin-top:20px;
+    height: 300px;
+    width: auto;
+}
+.img_container{
+    text-align: center;
+}
+
+@media (max-width: 400px) {
+    .container img{
+        margin-top:20px;
+        height: auto;
+        width: 100%;
+    }
+}

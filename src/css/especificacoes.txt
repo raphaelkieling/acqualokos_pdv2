@@ -1,0 +1,4 @@
+border-radius : 10px
+
+Cores--------------
+    principal - #c0c0c0;
