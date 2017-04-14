@@ -10,10 +10,15 @@
       </div>
 
       <br>
-      
-      <?= form_open('Controller_login/login');?>
-        <input type="text" placeholder="Nome" class="u-full-width">
-        <input type="password" placeholder="Senha" class="u-full-width">
+      <?php $message = $this->session->flashdata('message');
+        if($message){
+            echo "<div class='warning-message'>".$message."</div>";
+        }
+      ?>
+
+      <?= form_open("Controller_login/login/Cadastro");?>
+        <input type="text" placeholder="Nome" class="u-full-width" name="nome">
+        <input type="password" placeholder="Senha" class="u-full-width" name="senha">
 
         <div class="row">
           <div class="six columns">

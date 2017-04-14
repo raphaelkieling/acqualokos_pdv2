@@ -1,0 +1,10 @@
+.warning-message{
+    width:100%;
+    border-radius: 5px;
+    text-align: center;
+    color:white;
+    font-size: 14px;
+    padding: 5px;
+    background: #e74c3c;
+    margin-bottom: 5px;
+}
