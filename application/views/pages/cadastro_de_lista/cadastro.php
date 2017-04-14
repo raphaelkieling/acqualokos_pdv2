@@ -8,17 +8,22 @@
         <div class="img_container">
             <img src="<?=base_url();?>/src/img/paper_pen.png" alt="">
         </div>
-
         <?= form_open('Controller_cadastro/cadastro');?>
 
             <h3>Cadastro de listas</h3>
             <p style="color:#e74c3c">Todos os itens são obrigatórios</p>
 
-            <input type="text" placeholder="Ponto de Venda" class="u-full-width">
-            <input type="text" placeholder="Localidade" class="u-full-width">
-            <input type="text" placeholder="Responsável" class="u-full-width">
-            <input type="text" placeholder="Revendedor" class="u-full-width">
-
+            <input name="pontodevenda" type="text" placeholder="Ponto de Venda" class="u-full-width">
+            <input name="localidade" type="text" placeholder="Localidade" class="u-full-width">
+            <input name="responsavel" type="text" placeholder="Responsável" class="u-full-width">
+            <select name="revendedor" class="u-full-width">
+            <?php
+                foreach($array_revendedores as $revendedores){
+                    echo "<option value='".$revendedores['idUsuario']."'>".$revendedores['nome']."</option>";
+                }
+            ?>
+            </select>
+            
             <h3>Funcionários que serão inclusos</h3>
             <div class="row">
                 <div class="one column">
