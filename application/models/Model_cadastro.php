@@ -11,10 +11,11 @@
                 'dataCadastro'=>$data_cadastro
             );
             $this->db->insert('lista',$data);
-            
-            return $id_lista = $this->db->insert_id();
-
-
+            if($this->db->affected_rows()>0){
+                return $id_lista = $this->db->insert_id();
+            }else{
+                return false;
+            }
         }
         function  cadastroPessoa($id_lista,$funcionario,$documento,$i){
             $pessoa = array(

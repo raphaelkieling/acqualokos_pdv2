@@ -65,7 +65,7 @@
             <!--Final da primeira coluna-->
             
             <div class="six columns">
-                <a href="">
+                <a href="<?=base_url();?>revendedor_login">
                     <div class="box-button">
                         <img src="<?= base_url()?>/src/img/ticket_white.png" alt="">      
                     </div>

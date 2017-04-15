@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <link rel="stylesheet" href="<?=base_url();?>/src/css/cadastro_lista.css">
 </head>

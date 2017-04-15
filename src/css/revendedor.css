@@ -1,0 +1,39 @@
+.container img{
+    margin-top:20px;
+    height: 300px;
+    width: auto;
+}
+.img_container{
+    text-align: center;
+}
+.lista-container{
+    border:solid 1px #95989A;
+    border-radius: 5px;
+    padding:5px;
+    max-height:400px;
+    background: #FBFBFB;
+    margin-bottom: 15px;
+}
+
+.lista-info p {
+    line-height: 5px;
+}
+
+.lista-painel{
+    border:solid 1px #95989A;
+    border-radius: 5px;
+    padding: 5px;
+}
+.lista-painel table {
+    width: 100%;
+}
+.lista-painel th{
+    text-align: center;
+}
+@media (max-width: 400px) {
+    .container img{
+        margin-top:20px;
+        height: auto;
+        width: 100%;
+    }
+}

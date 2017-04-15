@@ -6,6 +6,13 @@
 .img_container{
     text-align: center;
 }
+.success-line{
+    margin: 0 auto;
+    display: block;
+    width: 90%;
+    height:5px;
+    background:#2ecc71;
+}
 
 @media (max-width: 400px) {
     .container img{

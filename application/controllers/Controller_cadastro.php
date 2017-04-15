@@ -8,6 +8,8 @@ class Controller_cadastro extends CI_Controller{
     
     function lista(){
         if($this->session->userdata('user_logado')== NULL){
+            $this->session->unset_userdata('user_logado');
+            $this->session->set_flashdata('message','Desculpe nome ou senha incorretos');
             redirect('/cadastro_login','refresh');
         }
 
@@ -20,9 +22,12 @@ class Controller_cadastro extends CI_Controller{
     }
 
     function cadastro(){
-        if($this->session->userdata('user_logado')== NULL){
+        if($this->session->userdata('user_logado') == NULL){
+            $this->session->unset_userdata('user_logado');
+            $this->session->set_flashdata('message','Desculpe nome ou senha incorretos');
             redirect('/cadastro_login','refresh');
         }
+
         $cadastrante = $this->session->userdata('user_logado')["idUsuario"];
         $ponto_venda = $this->input->post('pontodevenda');
         $localidade  = $this->input->post('localidade');
@@ -47,15 +52,21 @@ class Controller_cadastro extends CI_Controller{
             $data_cadastro,
             $funcionario,
             $documento);
-        
-        //for para inserir todas as pessoas da lista
-         for($i=0;$i<count($funcionario);$i++){
-            if(trim($funcionario[$i]) !=""){
-                $this->Model_cadastro->cadastroPessoa($codLista,$funcionario,$documento,$i);
-            }        
-         }
 
-         var_dump($revendedor);
+        //se alguma linha for afetada pelo cadastro da lista ele cadastra os funcionarios
+        if($codLista){
+            //for para inserir todas as pessoas da lista
+            for($i=0;$i<count($funcionario);$i++){
+                if(trim($funcionario[$i]) !=""){
+                    $this->Model_cadastro->cadastroPessoa($codLista,$funcionario,$documento,$i);
+                }        
+            }
+
+            $this->load->view('components/header');
+            $this->load->view('pages/cadastro_de_lista/success');
+        }
+      
+         
     }
 }
 ?>

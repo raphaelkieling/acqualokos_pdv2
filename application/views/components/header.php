@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="<?= base_url();?>/src/css/skeleton.css">
     <link rel="stylesheet" href="<?= base_url();?>/src/css/header.css">
     <link rel="stylesheet" href="<?= base_url();?>/src/css/message.css">
+    <link rel="stylesheet" href="<?= base_url();?>/src/css/button.css">
 
     <title>Sistema de Revendedores</title>
 </head>

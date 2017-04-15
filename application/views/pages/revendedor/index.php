@@ -1,10 +1,10 @@
 <head>
-    <link rel="stylesheet" href="<?=base_url();?>/src/css/cadastro_lista.css">
+    <link rel="stylesheet" href="<?=base_url();?>/src/css/revendedor.css">
 </head>
 <body>
     <div class="container">
       <div class="img_container">
-            <img src="<?=base_url();?>/src/img/paper_pen.png" alt="">
+            <img src="<?=base_url();?>/src/img/person_revendedor_careca.png" alt="">
       </div>
 
       <br>
@@ -14,7 +14,7 @@
         }
       ?>
 
-      <?= form_open("Controller_login/login/Cadastro");?>
+      <?= form_open("Controller_login/login/Revendedor")?>
         <input type="text" placeholder="Nome" class="u-full-width" name="nome">
         <input type="password" placeholder="Senha" class="u-full-width" name="senha">
 
