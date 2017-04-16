@@ -1,10 +1,10 @@
 <head>
-    <link rel="stylesheet" href="<?=base_url();?>/src/css/revendedor.css">
+    <link rel="stylesheet" href="<?=base_url();?>/src/css/acqualokos.css">
 </head>
 <body>
     <div class="container">
       <div class="img_container">
-            <img class="img-header" src="<?=base_url();?>/src/img/person_revendedor_careca.png" alt="">
+            <img class="img-header" src="<?=base_url();?>/src/img/acqualokos_logo.png" alt="">
       </div>
 
       <br>

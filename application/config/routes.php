@@ -50,13 +50,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'Controller_principal';
+
 $route['principal'] = 'Controller_principal';
 
 $route['revendedor_login'] = 'Controller_revendedor';
 $route['revendedor'] = 'Controller_revendedor/lista';
+$route['revendedor_aceita/(:num)'] = 'Controller_revendedor/revendedor_aceita/$1';
+$route['revendedor_cancela/(:num)'] = 'Controller_revendedor/revendedor_cancela/$1';
 
 $route['cadastro_lista'] = 'Controller_cadastro/lista';
 $route['cadastro_login'] = 'Controller_cadastro';
+
+$route['acqualokos_login'] = 'Controller_acqualokos';
+
+$route['chave'] = 'Controller_chave';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

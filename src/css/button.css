@@ -1,9 +1,17 @@
 .button-success{
     background:#2ecc71;
-    color:white;
 }
-
+.img-button {
+    width: auto !important;
+    height: 80% !important;
+    position: relative;
+    top:5px;
+}
 .button-danger{
     background:#e74c3c;
+}
+
+.button-danger, .button-success{
     color:white;
+    border:none;
 }

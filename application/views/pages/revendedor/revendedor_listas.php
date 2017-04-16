@@ -4,17 +4,20 @@
 <body>
     <div class="container">
         <br>
-        <h3 style="text-align:center">Revendedor</h3>
+        <h3 style="text-align:center">Olá <?= $this->session->userdata('user_logado')['nome']?>!</h3>
 
-        <?php foreach($data as $lista){?>
-        <div class="lista-container">
+        <?php foreach($data as $lista){
+            if($lista['situacao']!=3){
+        ?>
+        <div id="<?= $lista['idLista']?>" class="lista-container">
             <div class="lista-info">
-                <p style="margin-top:10px;">Lista <?= $lista['idLista']?> - <?= $lista['pontoVenda']?> (<?= $lista['revendedor']?>)</p>
+                <p style="margin-top:10px;">Lista <?= $lista['idLista']?> - <?= $lista['pontoVenda']?> (<?= $lista['nome']?>)</p>
                 <p><?=$lista['localidade']?></p>
                 <p><?=$lista['responsavel']?></p>
-                <p>24/08/2016</p>
+                <p><?= dataFormatada($lista['dataCadastro']) ?></p>
             </div><!-- info final -->
             <div class="lista-painel">
+                <?php if($lista['situacao']==0){?>
                 <table>
                     <thead>
                         <th>Nome</th>
@@ -22,8 +25,8 @@
                     </thead>
                     <tbody>
                         <?php 
-                        $modelo = $model->pegaPessoa($lista['idLista']);
-                        foreach($modelo as $pessoa){
+                            $modelo = $model->pegaPessoa($lista['idLista']);
+                            foreach($modelo as $pessoa){
                         ?>
                         <!--Começo do pegaPessoa-->
                         <tr>
@@ -32,22 +35,33 @@
                         </tr>
 
                         <?php 
-                        } 
+                            } //fim foreach
                         ?>
                     </tbody>
                 </table>
+                <?php
+                    }else if($lista['situacao']==1){
+                        echo "<p style='text-align:center'>Esperando confirmação do Acqualokos</p>";
+                    }
+                ?>
             </div> <!-- painel final -->
-            <br>
+             <?php if($lista['situacao']==0){?>
             <div class="row">
                 <div class="six columns">
-                    <button class="button-success u-full-width">Aceitar</button>
-                    </div>
+                    <button onclick="aceitaLista(<?=$lista['idLista']?>)" class="button-success u-full-width accept"><img class="img-button" src="<?=base_url()?>src/img/accept_min.png" alt="aceitar lista"></button>
+                </div>
                 <div class="six columns">
-                    <button class="button-danger u-full-width">Recusar</button>
+                    <button onclick="cancelaLista(<?=$lista['idLista']?>)" class="button-danger u-full-width"><img class="img-button" src="<?=base_url()?>src/img/recuse_min.png" alt="aceitar lista"></button>
                 </div>
             </div>
+            <?php }//verifica se a situacao esta certa?>
         </div><!-- lista FINAL -->
-        <?php } ?>
+        <?php 
+            }//if que verifica se ta cancelada     
+        }   //foreach
+         ?>
     </div>
+    <script src="<?=base_url()?>src/js/jquery-3.2.1.min.js"></script>
+    <script src="<?=base_url()?>src/js/revendedor.js"></script>
 </body>
 </html>

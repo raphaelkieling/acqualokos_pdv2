@@ -10,10 +10,13 @@
 
             <h3>Cadastro de listas</h3>
             <p style="color:#e74c3c">Todos os itens são obrigatórios</p>
+            <?php 
+                echo "<div class='warning-message-validation'>".validation_errors()."</div>";
+            ?>
 
-            <input name="pontodevenda" type="text" placeholder="Ponto de Venda" class="u-full-width">
-            <input name="localidade" type="text" placeholder="Localidade" class="u-full-width">
-            <input name="responsavel" type="text" placeholder="Responsável" class="u-full-width">
+            <input name="pontodevenda" type="text" placeholder="Ponto de Venda" class="u-full-width" value="<?php echo set_value('pontodevenda'); ?>">
+            <input name="localidade" type="text" placeholder="Localidade" class="u-full-width" value="<?php echo set_value('localidade'); ?>">
+            <input name="responsavel" type="text" placeholder="Responsável" class="u-full-width" value="<?php echo set_value('responsavel'); ?>">
             <select name="revendedor" class="u-full-width">
             <?php
                 foreach($array_revendedores as $revendedores){

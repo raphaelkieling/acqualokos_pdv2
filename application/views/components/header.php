@@ -16,5 +16,17 @@
     <header>
        <div class="header_container">
            <a href="http://localhost/acqualokos_pdv_2/principal"><img class="header_logo" src="<?= base_url();?>src/img/ponto_de_venda.png" alt=""></a>
+           <?php
+                $tipo = $this->session->userdata('user_logado')['tipo']==1;
+                if($tipo !=0){
+            ?>
+                    <a href="<?=base_url()?>Controller_login/sair">
+                        <button class="button-header" type="">
+                            <img class="img-button" src="<?=base_url()?>src/img/logout.png" alt="">
+                        </button>
+                    </a>
+            <?php
+               }
+            ?>
        </div>
     </header>

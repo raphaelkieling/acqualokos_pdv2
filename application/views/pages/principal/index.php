@@ -75,6 +75,15 @@
             <!--Final da segunda coluna-->
         </div>
         <!--Final row-->
+        <div class="row">
+                <a href="<?=base_url();?>chave">
+                    <div class="box-button">
+                        <img src="<?= base_url()?>/src/img/info.png" alt="">      
+                    </div>
+                </a>
+                <p style="text-align:center">Tenho uma chave de acesso</p>               
+        </div>
+        <!--Final row 2-->
 
     </div>
 
