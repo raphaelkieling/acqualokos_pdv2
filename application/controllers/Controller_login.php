@@ -31,8 +31,9 @@ class Controller_login extends CI_Controller{
             }
         }
         
-        $this->session->set_flashdata('message',$lugar);
-            redirect($voltar,'refresh');
+        // $this->session->set_flashdata('message',$lugar);
+        // redirect($voltar,'refresh');]
+        
         // Rotas--------------------------------------
     }
 

@@ -64,6 +64,7 @@ $route['cadastro_login'] = 'Controller_cadastro';
 $route['acqualokos_login'] = 'Controller_acqualokos';
 
 $route['chave'] = 'Controller_chave';
+$route['chave/cadastro'] = 'Controller_chave/cadastro';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
