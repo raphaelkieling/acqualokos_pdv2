@@ -44,7 +44,6 @@ class Controller_cadastro extends CI_Controller{
         $this->form_validation->set_rules('localidade','Localidade','required|trim');
         $this->form_validation->set_rules('responsavel','Responsavel','required|trim');
         $this->form_validation->set_rules('revendedor','Revendedor','required|trim');
-        $this->form_validation->set_rules('f','Funcionario','min_length[1]');
 
         if($this->form_validation->run()==FALSE){
            $this->lista();
@@ -65,10 +64,12 @@ class Controller_cadastro extends CI_Controller{
 
             //se alguma linha for afetada pelo cadastro da lista ele cadastra os funcionarios
             if($codLista){
-                //for para inserir todas as pessoas da lista
+                //for para inserir todas as pessoas da lista verificando se o documento não tá vazio
                 for($i=0;$i<count($funcionario);$i++){
                     if(trim($funcionario[$i]) !=""){
-                        $this->Model_cadastro->cadastroPessoa($codLista,$funcionario,$documento,$i);
+                        if(trim($documento[$i]) !=""){
+                            $this->Model_cadastro->cadastroPessoa($codLista,$funcionario,$documento,$i);
+                        }
                     }        
                 }
 

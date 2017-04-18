@@ -2,6 +2,7 @@
     border: solid 1px #D1D1D1;
     border-radius: 5px;
     height: 400px;
+    overflow-y:scroll;
 }
 .container-info{
     border: solid 1px #D1D1D1;

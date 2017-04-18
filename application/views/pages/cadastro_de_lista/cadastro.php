@@ -31,10 +31,10 @@
                     1
                 </div>
                 <div class="six columns">
-                   <input type="text" name="f[]" placeholder="Nome" class="u-full-width">
+                   <input type="text" name="f[]" placeholder="Nome" class="u-full-width" required>
                 </div>
                 <div class="five columns">
-                   <input type="text" name="d[]" placeholder="Documento" class="u-full-width">
+                   <input type="text" name="d[]" placeholder="Documento" class="u-full-width" required>
                 </div>
             </div>
 

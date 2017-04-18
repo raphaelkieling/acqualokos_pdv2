@@ -36,11 +36,11 @@ function pegaInfoPessoa(idLista,idUsuario){
             var data = data[0].dataCadastro;
 
             $('#inf_revendedor').html(revendedor);
-            $('#inf_responsavel').html(responsavel);
+            $('#inf_responsavel').html(responsavel.substr(0,10)+"...");
             $('#inf_lista').html(lista);
             $('#inf_veio').html(veio);
             $('#inf_data').html(data);
-            $('.container-info').append("<button class='u-full-width' onclick='pessoaVeio("+idUsuario+")'>Ele veio hoje</button>");
+            $('.container-info').append("<button class='u-full-width button-primary' onclick='pessoaVeio("+idUsuario+")'>Ele veio hoje</button>");
         },
         beforeSend:function(){
             $('span').animate({'opacity':'0'},300);
@@ -54,7 +54,7 @@ function pegaInfoPessoa(idLista,idUsuario){
 function pessoaVeio(idUsuario){
     var veio = $('#inf_veio').text();
     var result = parseInt(veio)+1;
-
+    
     if(confirm("Ele veio mesmo?")){
         $.ajax({
             url:'bilheteria/veio/'+idUsuario,
