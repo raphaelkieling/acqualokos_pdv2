@@ -23,3 +23,42 @@ function cadastrarChave(){
     })
 
 }
+
+function novaChave(){
+    
+    var chave = $('#input_chave').val();
+    var permissao = $('#permissao').val();
+
+    if(confirm("Quer cadastrar uma nova chefe?")){
+         $.ajax({
+            url:"novachave/"+chave+"/"+permissao,
+            success:function(data){
+                if(data == true){
+                    $("#container-chave").animate({'height':'0px'},'slow',()=>{
+                        $("#container-chave").hide();
+                        $(".warning-message-validation").append("<p class='p'>Cadastrado</p>");
+                    });
+                    pegaChaves();
+
+                }else{
+                    $("#container-chave").animate({'height':'0px'},'slow',()=>{
+                        $("#container-chave").hide();
+                        $(".warning-message-validation").append("<p>Houve algum erro</p>");
+                    });
+                }
+            }
+        })
+    }
+
+}
+
+function pegaChaves(){
+    $.ajax({
+        url:"pegachave",
+        success:function(data){
+            $('tbody').html('');
+            $('tbody').append(data);
+        }
+    });
+}
+pegaChaves();

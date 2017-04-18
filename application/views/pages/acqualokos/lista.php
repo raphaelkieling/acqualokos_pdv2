@@ -28,7 +28,12 @@
             </div>
             <div class="row">
                 <div class="three columns">
-                    <button class="u-full-width"><img class="img-button" src="<?=base_url();?>/src/img/key.png" alt=""></button>
+                    <a href="<?=base_url()?>chave/nova">
+                        <button class="u-full-width">
+                            <img class="img-button" src="<?=base_url();?>/src/img/key.png" alt="">
+                        </button>
+                    </a>
+                    
                 </div>
             </div>
         </div>

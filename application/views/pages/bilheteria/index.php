@@ -6,7 +6,7 @@
         <br>
         <div class="row">
             <div class="six columns">
-                <a href="<?=base_url()?>/acqualokos"><button class="u-full-width">voltar para acqua lokos</button></a>
+                <a href="<?=base_url()?>acqualokos"><button class="u-full-width">voltar para acqua lokos</button></a>
             </div>
         </div>
         <div class="row">

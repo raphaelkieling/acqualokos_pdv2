@@ -9,7 +9,7 @@
             return $this->db->get('lista')->result_array();
         }
         function pegaInfoPessoa($idLista){
-            $this->db->select('*');
+            $this->db->select('usuario.*,pessoa.vindas as vindas,lista.*');
             $this->db->where('idLista',$idLista);
             $this->db->join('usuario','usuario.idUsuario = lista.revendedor');
             $this->db->join('pessoa','pessoa.codLista = lista.idLista');

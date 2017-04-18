@@ -38,5 +38,53 @@ class Controller_chave extends CI_Controller{
             printf(validation_errors());
         }   
     }
+    function criaChave(){
+        if($this->session->userdata('user_logado') == NULL || $this->session->userdata('user_logado')['tipo']!=2 ){
+            $this->session->unset_userdata('user_logado');
+            $this->session->set_flashdata('message','Desculpe você não tem acesso a este conteúdo');
+            redirect('/acqualokos_login','refresh');
+        }
+        
+        $chave = md5(uniqid(rand(1,6)));
+        $data = array('chave' => $chave);
+        $this->load->view('components/header');
+        $this->load->view('pages/chave/chave',$data);
+    }
+    function novaChave($chave,$permissao){
+        if($this->session->userdata('user_logado') == NULL || $this->session->userdata('user_logado')['tipo']!=2 ){
+            $this->session->unset_userdata('user_logado');
+            $this->session->set_flashdata('message','Desculpe você não tem acesso a este conteúdo');
+            redirect('/acqualokos_login','refresh');
+        }
+
+        $this->load->model('Model_chave');
+        $data = $this->Model_chave->novaChave($chave,$permissao);
+        if($data){
+            printf(true);
+        }else{
+            printf(false);
+        }
+    }
+    function pegaChaves(){
+         if($this->session->userdata('user_logado') == NULL || $this->session->userdata('user_logado')['tipo']!=2 ){
+            $this->session->unset_userdata('user_logado');
+            $this->session->set_flashdata('message','Desculpe você não tem acesso a este conteúdo');
+            redirect('/acqualokos_login','refresh');
+        }
+        
+        $this->load->model('Model_chave');
+        $data = $this->Model_chave->pegaChaves();
+
+        foreach($data as $chaves){
+            if($chaves['usado']==1){
+                $color="#e74c3c";
+            }else{
+                $color="#2ecc71";
+            }
+
+            echo "<tr style='background:".$color.";color:white'><td>".$chaves['chave']."</td><td>".$chaves['tipo']."</td></tr>";
+        }
+
+    }
 }
 ?>

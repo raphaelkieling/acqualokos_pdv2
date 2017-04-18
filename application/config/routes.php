@@ -68,6 +68,9 @@ $route['acqualokos_cancela/(:num)'] = 'Controller_acqualokos/acqualokos_cancela/
 
 $route['chave'] = 'Controller_chave';
 $route['chave/cadastro'] = 'Controller_chave/cadastro';
+$route['chave/nova'] = 'Controller_chave/criaChave';
+$route['chave/novachave/(:any)/(:any)'] = 'Controller_chave/novaChave/$1/$2';
+$route['chave/pegachave'] = 'Controller_chave/pegaChaves';
 
 $route['bilheteria'] = 'Controller_bilheteria';
 $route['bilheteria/(:any)/(:any)/(:any)'] = 'Controller_bilheteria/pegaLista/$1/$2/$3';
