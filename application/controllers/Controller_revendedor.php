@@ -5,6 +5,7 @@ class Controller_revendedor extends CI_Controller{
         $this->load->view('components/header');
         $this->load->view('pages/revendedor/index');
     }
+    
     function lista(){
         if($this->session->userdata('user_logado') == NULL || $this->session->userdata('user_logado')['tipo']!=1 ){
             $this->session->unset_userdata('user_logado');
@@ -21,6 +22,7 @@ class Controller_revendedor extends CI_Controller{
         $this->load->view('components/header');
         $this->load->view('pages/revendedor/revendedor_listas',$data);
     }
+
     function revendedor_aceita($idLista){
         if($this->session->userdata('user_logado') == NULL || $this->session->userdata('user_logado')['tipo']!=1 ){
             $this->session->unset_userdata('user_logado');
@@ -38,6 +40,7 @@ class Controller_revendedor extends CI_Controller{
         }
         
     }
+
     function revendedor_cancela($idLista){
         if($this->session->userdata('user_logado') == NULL || $this->session->userdata('user_logado')['tipo']!=1 ){
             $this->session->unset_userdata('user_logado');

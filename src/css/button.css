@@ -1,17 +1,48 @@
 .button-success{
     background:#2ecc71;
 }
+.button-danger{
+    background:#e74c3c;
+}
 .img-button {
     width: auto !important;
     height: 80% !important;
     position: relative;
     top:5px;
 }
-.button-danger{
-    background:#e74c3c;
-}
 
 .button-danger, .button-success{
     color:white;
     border:none;
+}
+
+.mobile-button{
+    border:solid 1px #95989A;
+    width: 20%;
+    height:50px;
+    padding:10px;
+    margin:5px 0 5px 0;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+    background: white;
+}
+.img-button-mobile{
+    width: auto;
+    height:100%;
+}
+
+@media (max-width: 400px) {
+   .nav{
+        display: none;
+    }
+}
+
+@media (min-width: 400px) {
+    .mobile{
+        display: none;
+    }
+    .nav{
+        display: show;
+    }
 }

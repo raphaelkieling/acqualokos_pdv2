@@ -14,7 +14,7 @@
         }
       ?>
 
-      <?= form_open("Controller_login/login/Revendedor")?>
+      <?= form_open("Controller_login/login/Acqualokos")?>
         <input type="text" placeholder="Nome" class="u-full-width" name="nome">
         <input type="password" placeholder="Senha" class="u-full-width" name="senha">
 

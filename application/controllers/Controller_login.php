@@ -30,6 +30,15 @@ class Controller_login extends CI_Controller{
                 redirect('/revendedor_login','refresh');
             }
         }
+
+        if($lugar == 'Acqualokos'){
+            if($data){
+                redirect('/acqualokos','refresh');
+            }else{
+                $this->session->set_flashdata('message','Desculpe nome ou senha incorretos');
+                redirect('/acqualokos_login','refresh');
+            }
+        }
         
         // $this->session->set_flashdata('message',$lugar);
         // redirect($voltar,'refresh');]

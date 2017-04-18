@@ -61,10 +61,18 @@ $route['revendedor_cancela/(:num)'] = 'Controller_revendedor/revendedor_cancela/
 $route['cadastro_lista'] = 'Controller_cadastro/lista';
 $route['cadastro_login'] = 'Controller_cadastro';
 
+$route['acqualokos'] = 'Controller_acqualokos/lista';
 $route['acqualokos_login'] = 'Controller_acqualokos';
+$route['acqualokos_aceita/(:num)'] = 'Controller_acqualokos/acqualokos_aceita/$1';
+$route['acqualokos_cancela/(:num)'] = 'Controller_acqualokos/acqualokos_cancela/$1';
 
 $route['chave'] = 'Controller_chave';
 $route['chave/cadastro'] = 'Controller_chave/cadastro';
+
+$route['bilheteria'] = 'Controller_bilheteria';
+$route['bilheteria/(:any)/(:any)/(:any)'] = 'Controller_bilheteria/pegaLista/$1/$2/$3';
+$route['bilheteria/(:any)'] = 'Controller_bilheteria/pegaInfoPessoa/$1';
+$route['bilheteria/veio/(:any)'] = 'Controller_bilheteria/pessoaVeio/$1';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

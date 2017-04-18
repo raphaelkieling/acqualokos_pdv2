@@ -2,3 +2,4 @@ border-radius : 10px
 
 Cores--------------
     principal - #c0c0c0;
+    azul - #83D6DE;

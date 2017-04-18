@@ -17,7 +17,7 @@
        <div class="header_container">
            <a href="http://localhost/acqualokos_pdv_2/principal"><img class="header_logo" src="<?= base_url();?>src/img/ponto_de_venda.png" alt=""></a>
            <?php
-                $tipo = $this->session->userdata('user_logado')['tipo']==1;
+                $tipo = $this->session->userdata('user_logado')['tipo']>=1;
                 if($tipo !=0){
             ?>
                     <a href="<?=base_url()?>Controller_login/sair">

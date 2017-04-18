@@ -7,38 +7,6 @@
 .img_container{
     text-align: center;
 }
-
-.lista-container{
-    border:solid 1px #95989A;
-    border-radius: 5px;
-    padding:10px;
-    background: #FBFBFB;
-    margin-bottom: 15px;
-}
-.lista-container > .row{
-    margin-top:10px;
-}
-.lista-info p{
-    margin:2px;
-}
-
-.lista-painel{
-    border:solid 1px #95989A;
-    border-radius: 5px;
-    padding: 5px;
-    max-height: 300px;
-    background-color: white;
-    overflow-y: scroll;
-}
-
-.lista-painel table {
-    width: 100%;
-}
-
-.lista-painel th{
-    text-align: center;
-}
-
 @media (max-width: 400px) {
     .container .img-header{
         margin-top:20px;

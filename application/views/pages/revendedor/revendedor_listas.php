@@ -1,5 +1,6 @@
 <head>
     <link rel="stylesheet" href="<?=base_url();?>/src/css/revendedor.css">
+    <link rel="stylesheet" href="<?=base_url();?>/src/css/lista.css">
 </head>
 <body>
     <div class="container">
@@ -7,7 +8,7 @@
         <h3 style="text-align:center">Olá <?= $this->session->userdata('user_logado')['nome']?>!</h3>
 
         <?php foreach($data as $lista){
-            if($lista['situacao']!=3){
+            if($lista['situacao']!=3 && $lista['situacao']!=2){
         ?>
         <div id="<?= $lista['idLista']?>" class="lista-container">
             <div class="lista-info">
