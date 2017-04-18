@@ -27,21 +27,6 @@ class Controller_bilheteria extends CI_Controller{
             echo "<td>".$pessoa['documento']."</td></tr>";
         }
     }
-    function pegaInfoPessoa($idLista){
-         if($this->session->userdata('user_logado') == NULL || $this->session->userdata('user_logado')['tipo']!=2 ){
-            $this->session->unset_userdata('user_logado');
-            $this->session->set_flashdata('message','Desculpe você não tem acesso a este conteúdo');
-            redirect('/acqualokos_login','refresh');
-         }  
-        
-         $this->load->model('Model_bilheteria');
-         $data = $this->Model_bilheteria->pegaInfoPessoa($idLista);
-         
-         
-         header('Content-type: application/json');
-         echo json_encode($data);
-    }
-
     function pessoaVeio($idPessoa){
         if($this->session->userdata('user_logado') == NULL || $this->session->userdata('user_logado')['tipo']!=2 ){
             $this->session->unset_userdata('user_logado');
@@ -50,12 +35,29 @@ class Controller_bilheteria extends CI_Controller{
          }  
 
          $this->load->model('Model_bilheteria');
-         $data = $this->Model_bilheteria->pessoaVeio($idPessoa);
+         $datav = $this->Model_bilheteria->pegaVindas($idPessoa);
+         $data = $this->Model_bilheteria->pessoaVeio($idPessoa,$datav[0]['vindas']);
+
          if($data){
-             echo "Tudo certo";
+             printf(true);
          }else{
-             echo "Deu errado";
+             printf(false);
          }
+    }
+    function pegaInfoPessoa($idLista,$idPessoa){
+        
+         if($this->session->userdata('user_logado') == NULL || $this->session->userdata('user_logado')['tipo']!=2 ){
+            $this->session->unset_userdata('user_logado');
+            $this->session->set_flashdata('message','Desculpe você não tem acesso a este conteúdo');
+            redirect('/acqualokos_login','refresh');
+         }  
+        
+         $this->load->model('Model_bilheteria');
+         $data = $this->Model_bilheteria->pegaInfoPessoa($idLista,$idPessoa);
+         
+         
+         header('Content-type: application/json');
+         echo json_encode($data);
     }
 }
 ?>

@@ -74,8 +74,8 @@ $route['chave/pegachave'] = 'Controller_chave/pegaChaves';
 
 $route['bilheteria'] = 'Controller_bilheteria';
 $route['bilheteria/(:any)/(:any)/(:any)'] = 'Controller_bilheteria/pegaLista/$1/$2/$3';
-$route['bilheteria/(:any)'] = 'Controller_bilheteria/pegaInfoPessoa/$1';
-$route['bilheteria/veio/(:any)'] = 'Controller_bilheteria/pessoaVeio/$1';
+$route['bilheteria/(:any)/(:num)'] = 'Controller_bilheteria/pegaInfoPessoa/$1/$2';
+$route['bilheteria/(:num)'] = 'Controller_bilheteria/pessoaVeio/$1';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

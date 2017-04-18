@@ -26,7 +26,7 @@ function pegaInfoPessoa(idLista,idUsuario){
     $('.container-info > button').remove();
 
     $.ajax({
-        url:'bilheteria/'+idLista,
+        url:'bilheteria/'+idLista+"/"+idUsuario,
         datatype:'json',
         success:function(data){
             var revendedor = data[0].nome;
@@ -54,14 +54,15 @@ function pegaInfoPessoa(idLista,idUsuario){
 function pessoaVeio(idUsuario){
     var veio = $('#inf_veio').text();
     var result = parseInt(veio)+1;
-    
+
     if(confirm("Ele veio mesmo?")){
         $.ajax({
-            url:'bilheteria/veio/'+idUsuario,
+            url:'bilheteria/'+idUsuario,
             success:function(data){
-                $('#inf_veio').html(result);
+                if(data == true){
+                    $('#inf_veio').html(result);
+                }      
             }
-
-        })
-    }
+        });// Sai ajax
+    }// Sai do if
 }
