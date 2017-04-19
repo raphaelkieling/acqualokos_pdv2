@@ -1,14 +1,13 @@
 .container-pessoas{
     border: solid 1px #D1D1D1;
     border-radius: 5px;
-    height: 400px;
+    height: 425px;
     overflow-y:scroll;
 }
 .container-info{
     border: solid 1px #D1D1D1;
     border-radius: 5px;
     padding: 10px;
-    height: 400px;
 }
 .container-info span{
     font-weight: normal;

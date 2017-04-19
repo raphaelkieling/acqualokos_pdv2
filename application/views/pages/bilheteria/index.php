@@ -64,6 +64,7 @@
                 </div>
                 <p><b>Revendedor: </b><span id="inf_revendedor"></span></p>
                 <p><b>Responsável:</b> <span id="inf_responsavel"></span></p>
+                <p><b>Localidade:</b> <span id="inf_localidade"></span></p>
                 <p><b>Lista:</b> <span id="inf_lista"></span></p>
                 <p><b>Veio </b> <span id="inf_veio"></span> <span>vezes</span></p>
                 <p><b>Data Cadastro:</b> <span id="inf_data"></span></p>

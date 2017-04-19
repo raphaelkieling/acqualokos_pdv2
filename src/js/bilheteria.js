@@ -5,6 +5,7 @@ function search(url){
 
     if(word.length == 0){
         $('tbody').html("<tr><td colspan='2'><img src='"+url+"src/img/comp_zoom_ui.png'></td></tr>");
+        limpaInfo();
     }
 
     var word_en = encodeURIComponent(word);
@@ -16,15 +17,17 @@ function search(url){
         }
     });
 }
-
-function pegaInfoPessoa(idLista,idUsuario){
+function limpaInfo(){
     $('#inf_revendedor').html("");
     $('#inf_responsavel').html("");
     $('#inf_lista').html("");
+    $('#inf_localidade').html("");
     $('#inf_veio').html("");
     $('#inf_data').html("");
     $('.container-info > button').remove();
-
+}
+function pegaInfoPessoa(idLista,idUsuario){
+    limpaInfo();
     $.ajax({
         url:'bilheteria/'+idLista+"/"+idUsuario,
         datatype:'json',
@@ -33,13 +36,15 @@ function pegaInfoPessoa(idLista,idUsuario){
             var responsavel= data[0].responsavel;
             var lista = data[0].idLista;
             var veio  = data[0].vindas;
-            var data = data[0].dataCadastro;
+            var date = data[0].dataCadastro;
+            var localidade = data[0].localidade;
 
             $('#inf_revendedor').html(revendedor);
             $('#inf_responsavel').html(responsavel.substr(0,10)+"...");
+            $('#inf_localidade').html(localidade);
             $('#inf_lista').html(lista);
             $('#inf_veio').html(veio);
-            $('#inf_data').html(data);
+            $('#inf_data').html(date);
             $('.container-info').append("<button class='u-full-width button-primary' onclick='pessoaVeio("+idUsuario+")'>Ele veio hoje</button>");
         },
         beforeSend:function(){

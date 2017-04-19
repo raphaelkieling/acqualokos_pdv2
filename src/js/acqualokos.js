@@ -31,16 +31,16 @@ function cancelaLista(idLista){
 
 var unsee = true;
 $('.situacao-0').hide();
-$('.unsee').css("background","#83D6DE");
+$('.unsee').css("background","white");
 
 $('.unsee').click(()=>{
     unsee = !unsee;
     if(unsee == true){
         $('.situacao-0').hide();
-        $('.unsee').css("background","#83D6DE");
+        $('.unsee').css("background","white");
 
     }else{
         $('.situacao-0').show();
-        $('.unsee').css("background","white");
+        $('.unsee').css("background","#83D6DE");
     }
 });
