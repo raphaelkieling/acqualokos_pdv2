@@ -24,6 +24,10 @@
     max-height: 70px;
     background: white;
 }
+/*.container-statistic{
+    width: 200px;
+    height: 200px;
+}*/
 @media (max-width: 400px) {
     .container .img-header{
         margin-top:20px;

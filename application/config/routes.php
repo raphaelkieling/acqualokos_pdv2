@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'Controller_principal';
 
 $route['principal'] = 'Controller_principal';
+$route['principal/lista/(:any)'] = 'Controller_principal/lista_procura/$1';
 
 $route['revendedor_login'] = 'Controller_revendedor';
 $route['revendedor'] = 'Controller_revendedor/lista';
@@ -63,6 +64,7 @@ $route['cadastro_login'] = 'Controller_cadastro';
 
 $route['acqualokos'] = 'Controller_acqualokos/lista';
 $route['acqualokos_login'] = 'Controller_acqualokos';
+$route['acqualokos/relatorio'] = 'Controller_acqualokos/relatorio';
 $route['acqualokos_aceita/(:num)'] = 'Controller_acqualokos/acqualokos_aceita/$1';
 $route['acqualokos_cancela/(:num)'] = 'Controller_acqualokos/acqualokos_cancela/$1';
 

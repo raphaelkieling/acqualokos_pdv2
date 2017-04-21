@@ -20,7 +20,9 @@
                     </a>
                 </div>
                 <div class="three columns">
-                    <button class="u-full-width"><img class="img-button" src="<?=base_url();?>/src/img/statistic.png" alt=""></button>
+                    <a href="<?=base_url()?>acqualokos/relatorio">
+                        <button class="u-full-width"><img class="img-button" src="<?=base_url();?>/src/img/statistic.png" alt=""></button>
+                    </a>
                 </div>
                 <div class="three columns">
                     <button class="u-full-width"><img class="img-button" src="<?=base_url();?>/src/img/log.png" alt=""></button>
@@ -43,6 +45,7 @@
 
     <div class="container">
         <br>
+                <canvas id="myChart" width="100" height="100"></canvas>
         <!--COMEÇO DAS LISTAS-->
         <?php foreach($data as $lista){
             if($lista['situacao']!=3 && $lista['situacao']!=2){
@@ -107,14 +110,14 @@
         </div>
         <a href="<?=base_url()?>bilheteria">
             <div class="mobile-button">
-                <img class="img-button-mobile" src="<?=base_url();?>/src/img/ticket.png" alt="">
+                <img class="img-button-mobile" src="<?=base_url();?>/src/img/ticket.png" alt="Bilheteria">
             </div>
         </a>
         <div class="mobile-button">
-            <img class="img-button-mobile" src="<?=base_url();?>/src/img/statistic.png" alt="">
+            <a href="<?=base_url()?>acqualokos/relatorio"><img class="img-button-mobile" src="<?=base_url();?>/src/img/statistic.png" alt="Estatísticas"></a>
         </div>
         <div class="mobile-button">
-            <img class="img-button-mobile" src="<?=base_url();?>/src/img/log.png" alt="">
+            <img class="img-button-mobile" src="<?=base_url();?>/src/img/log.png" alt="Log">
         </div>
     </footer>
     <script src="<?=base_url()?>src/js/jquery-3.2.1.min.js"></script>

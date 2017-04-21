@@ -29,7 +29,7 @@
     <br>
     <!--Tabela de pesquisa-->
     <div class="container">
-        <input class="u-full-width" type="text" name="serch_accepts" value="" placeholder="Procure pelo nome ou documento">
+        <input class="u-full-width" type="text" id="serch_accepts" onkeyup="searchMain();" placeholder="Procure pelo nome ou documento">
         
         <div class="table-search">
              <table class="u-full-width">
@@ -40,10 +40,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td> Raphael Kieling </td>
-                    <td>033.740.290-60</td>
-                </tr>
+                
             </tbody>
         </table>
         </div>

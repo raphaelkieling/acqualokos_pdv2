@@ -21,6 +21,16 @@ class Controller_acqualokos extends CI_Controller{
         $this->load->view('components/header');
         $this->load->view('pages/acqualokos/lista',$data);
     }
+    function relatorio(){
+        if($this->session->userdata('user_logado') == NULL || $this->session->userdata('user_logado')['tipo']!=2 ){
+            $this->session->unset_userdata('user_logado');
+            $this->session->set_flashdata('message','Desculpe você não tem acesso a este conteúdo');
+            redirect('/acqualokos_login','refresh');
+        }
+
+        $this->load->view('components/header');
+        $this->load->view('pages/acqualokos/relatorio');
+    }
     function acqualokos_aceita($idLista){
         if($this->session->userdata('user_logado') == NULL || $this->session->userdata('user_logado')['tipo']!=2 ){
             $this->session->unset_userdata('user_logado');
