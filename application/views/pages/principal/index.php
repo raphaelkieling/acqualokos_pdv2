@@ -40,7 +40,7 @@
                 </tr>
             </thead>
             <tbody>
-                
+                <!-- Aqui entra o ajax do main.js -->
             </tbody>
         </table>
         </div>
@@ -48,7 +48,7 @@
        <!--Descricao do conteudo do main ABAIXO-->
 
        <p>Certifique que seu nome esteja correto. Qualquer dúvida entre em contato com seu revendedor e/ou responsável para verificar a disponibilidade do teu nome na lista! </p>
-       <p>Caso queira comprar o ingresso visite o site: www.acqualokos.com.br</p>
+       <p>Caso queira comprar o ingresso visite o site: <a href="http://www.acqualokos.com.br">www.acqualokos.com.br</a></p>
         <div class="row">
 
             <div class="six columns">

@@ -6,11 +6,15 @@
     <div class="container">
         <br>
         <h3 style="text-align:center">Olá <?= $this->session->userdata('user_logado')['nome']?>!</h3>
-
+        <div class="row">
+            <button class="u-full-width" id="button_hide">
+                <img class="img-button" src="<?=base_url()?>src/img/unsee.png" alt="">
+            </button>
+        </div>
         <?php foreach($data as $lista){
-            if($lista['situacao']!=3 && $lista['situacao']!=2){
+            if($lista['situacao']!=3){
         ?>
-        <div id="<?= $lista['idLista']?>" class="lista-container">
+        <div id="<?= $lista['idLista']?>" class="lista-container situacao-<?= $lista['situacao']?>">
             <div class="lista-info">
                 <p style="margin-top:10px;">Lista <?= $lista['idLista']?> - <?= $lista['pontoVenda']?> (<?= $lista['nome']?>)</p>
                 <p><?=$lista['localidade']?></p>
@@ -43,6 +47,8 @@
                 <?php
                     }else if($lista['situacao']==1){
                         echo "<p style='text-align:center'>Esperando confirmação do Acqualokos</p>";
+                    }else if($lista['situacao']==2){
+                        echo "<p style='text-align:center'>Acqualokos já aceitou a lista</p>";
                     }
                 ?>
             </div> <!-- painel final -->
@@ -55,7 +61,7 @@
                     <button onclick="cancelaLista(<?=$lista['idLista']?>)" class="button-danger u-full-width"><img class="img-button" src="<?=base_url()?>src/img/recuse_min.png" alt="aceitar lista"></button>
                 </div>
             </div>
-            <?php }//verifica se a situacao esta certa?>
+            <?php } //verifica se a situacao esta certa?>
         </div><!-- lista FINAL -->
         <?php 
             }//if que verifica se ta cancelada     

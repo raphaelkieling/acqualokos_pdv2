@@ -53,6 +53,7 @@ $route['default_controller'] = 'Controller_principal';
 
 $route['principal'] = 'Controller_principal';
 $route['principal/lista/(:any)'] = 'Controller_principal/lista_procura/$1';
+$route['principal/lista_total'] = 'Controller_principal/lista_procura_total';
 
 $route['revendedor_login'] = 'Controller_revendedor';
 $route['revendedor'] = 'Controller_revendedor/lista';

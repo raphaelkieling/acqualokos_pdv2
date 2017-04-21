@@ -10,5 +10,12 @@ class Controller_principal extends CI_Controller{
         header('Content-type:application/json');
         echo json_encode($data);
     }
+    function lista_procura_total(){
+         $this->load->model('Model_principal');
+         $data = $this->Model_principal->pegaListaTotal();
+         header('Content-type:application/json');
+         echo json_encode($data);
+
+    }
 }
 ?>

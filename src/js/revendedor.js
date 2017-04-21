@@ -27,3 +27,19 @@ function cancelaLista(idLista){
     }//final if
 };
 
+var apareceu = true;
+function hideSituacao(){
+    apareceu = !apareceu;
+
+    if(apareceu == false){
+        $('.situacao-2').hide();
+    }else{
+        $('.situacao-2').show();
+    }
+   
+}
+hideSituacao();
+
+$('#button_hide').click(()=>{
+    hideSituacao();
+});
