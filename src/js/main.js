@@ -4,7 +4,8 @@
         scrollTop:target.offset().top
     })
 })
-pegaListaTudo()
+pegaListaTudo($('.table-search > table > tbody'));
+
 function pegaListaTudo(table){
   $.ajax({
         url: 'principal/lista_total',

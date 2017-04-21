@@ -45,7 +45,6 @@
 
     <div class="container">
         <br>
-                <canvas id="myChart" width="100" height="100"></canvas>
         <!--COMEÇO DAS LISTAS-->
         <?php foreach($data as $lista){
             if($lista['situacao']!=3 && $lista['situacao']!=2){
