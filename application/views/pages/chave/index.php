@@ -4,6 +4,7 @@
 <body>
     <div class="container">
         <br>
+        <h1>Cadastro</h1>
         <div class='warning-message-validation'></div>
         <div class="container-chave">        
             <br>

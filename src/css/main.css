@@ -20,6 +20,9 @@ h2{
     color:white;
     bottom:0;
 }
+.header_info h3{
+    font-family: 'Lobster';
+}
 .header_info button{
     color:white;
 }

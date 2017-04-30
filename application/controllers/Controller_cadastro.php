@@ -34,15 +34,33 @@ class Controller_cadastro extends CI_Controller{
         $ponto_venda = $this->input->post('pontodevenda');
         $localidade  = $this->input->post('localidade');
         $responsavel = $this->input->post('responsavel');
+        $descricao   = $this->input->post('descricao');
         $revendedor = $this->input->post('revendedor');
         $data_cadastro = date("Y-m-d");
         $funcionario = $this->input->post('f[]');
         $documento   = $this->input->post('d[]');
         
+        //html encoded
+        $cadastrante = htmlspecialchars($cadastrante);
+        $ponto_venda = htmlspecialchars($ponto_venda);
+        $localidade  = htmlspecialchars($localidade);
+        $responsavel = htmlspecialchars($responsavel);
+        $descricao   = htmlspecialchars($descricao);
+        $revendedor  = htmlspecialchars($revendedor);
+
+        //colocando tudo em minusculo e botando a primeira letra em maiusculo
+        $cadastrante = ucfirst(strtolower($cadastrante));
+        $ponto_venda = ucfirst(strtolower($ponto_venda));
+        $localidade  = ucfirst(strtolower($localidade));
+        $responsavel = ucfirst(strtolower($responsavel));
+        $descricao   = ucfirst(strtolower($descricao));
+        $revendedor  = ucfirst(strtolower($revendedor));
+
         //validação do formulário
         $this->form_validation->set_rules('pontodevenda','Ponto de Venda','required|trim');
         $this->form_validation->set_rules('localidade','Localidade','required|trim');
         $this->form_validation->set_rules('responsavel','Responsavel','required|trim');
+        $this->form_validation->set_rules('descricao','Descrição','trim');
         $this->form_validation->set_rules('revendedor','Revendedor','required|trim');
 
         if($this->form_validation->run()==FALSE){
@@ -57,6 +75,7 @@ class Controller_cadastro extends CI_Controller{
                 $ponto_venda,
                 $localidade,
                 $responsavel,
+                $descricao,
                 $revendedor,
                 $data_cadastro,
                 $funcionario,
@@ -68,6 +87,8 @@ class Controller_cadastro extends CI_Controller{
                 for($i=0;$i<count($funcionario);$i++){
                     if(trim($funcionario[$i]) !=""){
                         if(trim($documento[$i]) !=""){
+                            $funcionario[$i] = htmlspecialchars($funcionario[$i]);
+                            $documento[$i] = htmlspecialchars($documento[$i]);
                             $this->Model_cadastro->cadastroPessoa($codLista,$funcionario,$documento,$i);
                         }
                     }        

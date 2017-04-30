@@ -1,12 +1,13 @@
 <?php
     class Model_cadastro extends CI_Model{
         // Cadastro da lista 
-        function cadastroLista($cadastrante,$ponto_venda,$localidade,$responsavel,$revendedor,$data_cadastro,$funcionario,$documento){
+        function cadastroLista($cadastrante,$ponto_venda,$localidade,$responsavel,$descricao,$revendedor,$data_cadastro,$funcionario,$documento){
             $data =array(
                 'cadastrante' =>$cadastrante,
                 'pontoVenda'  =>$ponto_venda,
                 'localidade'  =>$localidade,
                 'responsavel' =>$responsavel,
+                'descricao'   =>$descricao,
                 'revendedor'  =>$revendedor,
                 'dataCadastro'=>$data_cadastro
             );

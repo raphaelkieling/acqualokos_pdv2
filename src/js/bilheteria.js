@@ -20,8 +20,10 @@ function search(url){
 function limpaInfo(){
     $('#inf_revendedor').html("");
     $('#inf_responsavel').html("");
+    $('#inf_pdv').html("");
     $('#inf_lista').html("");
     $('#inf_localidade').html("");
+    $('#inf_descricao').html("");
     $('#inf_veio').html("");
     $('#inf_data').html("");
     $('.container-info > button').remove();
@@ -34,14 +36,18 @@ function pegaInfoPessoa(idLista,idUsuario){
         success:function(data){
             var revendedor = data[0].nome;
             var responsavel= data[0].responsavel;
+            var pdv = data[0].pontoVenda;
             var lista = data[0].idLista;
             var veio  = data[0].vindas;
             var date = data[0].dataCadastro;
             var localidade = data[0].localidade;
+            var descricao = data[0].descricao;
 
             $('#inf_revendedor').html(revendedor);
             $('#inf_responsavel').html(responsavel.substr(0,10)+"...");
+            $('#inf_pdv').html(pdv);
             $('#inf_localidade').html(localidade);
+            $('#inf_descricao').html(descricao);
             $('#inf_lista').html(lista);
             $('#inf_veio').html(veio);
             $('#inf_data').html(date);

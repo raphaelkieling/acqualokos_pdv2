@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"> 
+
     <link rel="stylesheet" href="<?= base_url()?>/src/css/normalize.css">
     <link rel="stylesheet" href="<?= base_url()?>/src/css/skeleton.css">
     <link rel="stylesheet" href="<?= base_url()?>/src/css/main.css">
@@ -18,8 +21,8 @@
             <img class="header_logo" src="<?= base_url();?>src/img/ponto_de_venda.png" alt="">
 
             <div class="header_info">   
-                <h3>Quer saber se seu nome esta na lista?</h3>
-               <button id="button_header_info">Verifique</button>
+                <h3>Quer saber se seu nome tá na lista?</h3>
+                <button id="button_header_info">Verifica AQUI</button>
             </div>
        </div>
     </header>
@@ -71,17 +74,6 @@
             </div>
             <!--Final da segunda coluna-->
         </div>
-        <!--Final row-->
-        <div class="row">
-                <a href="<?=base_url();?>chave">
-                    <div class="box-button">
-                        <img src="<?= base_url()?>/src/img/info.png" alt="">      
-                    </div>
-                </a>
-                <p style="text-align:center">Tenho uma chave de acesso</p>               
-        </div>
-        <!--Final row 2-->
-
     </div>
 
     <script src="<?= base_url();?>/src/js/jquery-3.2.1.min.js"></script>

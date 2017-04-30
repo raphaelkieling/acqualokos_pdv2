@@ -4,7 +4,7 @@
 <body>
     <div class="container">
       <div class="img_container">
-            <img src="<?=base_url();?>/src/img/paper_pen.png" alt="">
+            <img class="img-lista" src="<?=base_url();?>/src/img/paper_pen.png" alt="">
       </div>
 
       <br>
@@ -18,16 +18,7 @@
         <input type="text" placeholder="Nome" class="u-full-width" name="nome">
         <input type="password" placeholder="Senha" class="u-full-width" name="senha">
 
-        <div class="row">
-          <div class="six columns">
-              <input type="checkbox" name="" value=""> Salvar nome
-          </div>
-          <div class="six columns" style="text-align:right">
-              <a href="#">Esqueci minha senha</a>
-          </div>
-        </div>
-
-         <button type="submit" class="u-full-width button-primary u-pull-right">Enviar</button>
+         <button type="submit" class="u-full-width button-primary u-pull-right "><img class="img-button" src="<?=base_url()?>src/img/send_white.png" alt="botão de login"></button>
       <?= form_close();?>
       
     </div><!--Container-->

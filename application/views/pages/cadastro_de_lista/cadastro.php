@@ -4,7 +4,7 @@
 <body>
     <div class="container">
         <div class="img_container">
-            <img src="<?=base_url();?>/src/img/paper_pen.png" alt="">
+            <img class="img-lista" src="<?=base_url();?>/src/img/paper_pen.png" alt="">
         </div>
         <?= form_open('Controller_cadastro/cadastro');?>
 
@@ -17,6 +17,7 @@
             <input name="pontodevenda" type="text" placeholder="Ponto de Venda" class="u-full-width" value="<?php echo set_value('pontodevenda'); ?>">
             <input name="localidade" type="text" placeholder="Localidade" class="u-full-width" value="<?php echo set_value('localidade'); ?>">
             <input name="responsavel" type="text" placeholder="Responsável" class="u-full-width" value="<?php echo set_value('responsavel'); ?>">
+            <input name="descricao" type="text" placeholder="Descrição" class="u-full-width" value="<?php echo set_value('descricao'); ?>">
             <select name="revendedor" class="u-full-width">
             <?php
                 foreach($array_revendedores as $revendedores){

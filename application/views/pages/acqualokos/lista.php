@@ -107,11 +107,9 @@
         <div class="mobile-button unsee" >
             <img class="img-button-mobile" src="<?=base_url();?>/src/img/unsee.png" alt="Esconder listas que estão com os revendedores">    
         </div>
-        <a href="<?=base_url()?>bilheteria">
-            <div class="mobile-button">
-                <img class="img-button-mobile" src="<?=base_url();?>/src/img/ticket.png" alt="Bilheteria">
-            </div>
-        </a>
+        <div class="mobile-button">
+            <a href="<?=base_url()?>bilheteria"><img class="img-button-mobile" src="<?=base_url();?>/src/img/ticket.png" alt="Bilheteria"></a>
+        </div>
         <div class="mobile-button">
             <a href="<?=base_url()?>acqualokos/relatorio"><img class="img-button-mobile" src="<?=base_url();?>/src/img/statistic.png" alt="Estatísticas"></a>
         </div>
