@@ -38,7 +38,7 @@ header{
 }
 
 .pace .pace-progress {
-  background: greenyellow;
+  background: #fff;
   position: fixed;
   z-index: 2000;
   top: 0;
