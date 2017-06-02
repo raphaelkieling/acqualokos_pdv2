@@ -3,32 +3,31 @@
     <link rel="stylesheet" href="<?=base_url();?>/src/css/lista.css">
 </head>
 <body>
-    <h3 style="text-align:center;margin-top:10px;">Olá <?= $this->session->userdata('user_logado')['nome']?>!</h3>
-
+    <br>
     <!--COMEÇO MENU BOTÕES FILTRO BILHETERIA ETC-->
     <div class="nav">
         <div class="container">
             <div class="row">
                 <div class="three columns">
-                    <button class="u-full-width unsee"> <img class="img-button" src="<?=base_url();?>/src/img/unsee.png" alt="Esconder listas que estão com os revendedores"></button>     
+                    <button class="u-full-width unsee no-button"> <img class="img-button" src="<?=base_url();?>/src/img/unsee.png" alt="Esconder listas que estão com os revendedores"></button>     
                 </div>
                 <div class="three columns">
                     <a href="<?=base_url()?>bilheteria">
-                        <button class="u-full-width">
+                        <button class="u-full-width no-button">
                             <img class="img-button" src="<?=base_url();?>/src/img/ticket.png" alt="">
                         </button>
                     </a>
                 </div>
-                <div class="three columns">
+                <!--<div class="three columns">
                     <a href="<?=base_url()?>acqualokos/relatorio">
                         <button class="u-full-width"><img class="img-button" src="<?=base_url();?>/src/img/statistic.png" alt=""></button>
                     </a>
-                </div>
-                <div class="three columns">
+                </div>-->
+                <!--<div class="three columns">
                     <button class="u-full-width"><img class="img-button" src="<?=base_url();?>/src/img/log.png" alt=""></button>
-                </div>
+                </div>-->
             </div>
-            <div class="row">
+            <!--<div class="row">
                 <div class="three columns">
                     <a href="<?=base_url()?>chave/nova">
                         <button class="u-full-width">
@@ -37,7 +36,7 @@
                     </a>
                     
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
 
@@ -110,12 +109,12 @@
         <div class="mobile-button">
             <a href="<?=base_url()?>bilheteria"><img class="img-button-mobile" src="<?=base_url();?>/src/img/ticket.png" alt="Bilheteria"></a>
         </div>
-        <div class="mobile-button">
+        <!--<div class="mobile-button">
             <a href="<?=base_url()?>acqualokos/relatorio"><img class="img-button-mobile" src="<?=base_url();?>/src/img/statistic.png" alt="Estatísticas"></a>
         </div>
         <div class="mobile-button">
             <img class="img-button-mobile" src="<?=base_url();?>/src/img/log.png" alt="Log">
-        </div>
+        </div>-->
     </footer>
     <script src="<?=base_url()?>src/js/jquery-3.2.1.min.js"></script>
     <script src="<?=base_url()?>src/js/acqualokos.js"></script>

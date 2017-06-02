@@ -24,6 +24,9 @@
     max-height: 70px;
     background: white;
 }
+.no-button{
+    border: none !important;
+}
 /*.container-statistic{
     width: 200px;
     height: 200px;
